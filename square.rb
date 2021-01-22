@@ -1,3 +1,3 @@
 def is_square(x)
-    x < 0 ? false : Math.sqrt(x) % 1 == 0
-   end
+    x < 0 ? false : (x**0.5) % 1 == 0
+end
