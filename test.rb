@@ -1,7 +1,7 @@
 # Activity 1
 
 arr = [1,2,3,4,5,6,7,8,9,10]
-print arr.each
+print arr.each { |num| p num}
 
 # Activity 2
 
@@ -13,14 +13,16 @@ h[:e] = 5
 contact_data = [['ana@email.com', '123 Main st.', '555-123-4567'], 
     ['avion@email.com', '404 Not Found Dr.', '123-234-3454']]
 contacts = {"Analyn Cajocson" => {}, "Avion School" => {}}
-contacts['Analyn Cajocson'] = contact_data[0]
-contacts['Avion School'] = contact_data[1]
-print contacts['Analyn Cajocson']
-print contacts['Avion School']
+A = {email: contact_data[0][0], address: contact_data[0][1], phone: contact_data[0][2]}
+B = {email: contact_data[1][0], address: contact_data[1][1], phone: contact_data[1][2]}
+
+contacts["Analyn Cajocson"] = A
+contacts["Avion School"] = B
+print contacts
 
 # Activity 4
 print "How old are you?"
-age = gets.chomp
+age = gets.chomp.to_i
 print "In 10 years you will be:
 #{age + 10}"
 print "In 20 years you will be:
